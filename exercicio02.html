@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercício 02</h1>
+    <p>Faça um programa que receba o ano de nascimento de uma pessoa e
+        o ano atual. Calcule e imprima:
+        a. A idade dessa pessoa
+        b. Essa idade convertida em semanas        
+        </p>
+        
+    <div id="resultado">?? <span>????</span> </div>
+
+    <script>
+        
+        //entrada
+        let anoNasc = prompt( "Em que ano você nasceu?" );
+        let anoAtual = 2021;
+        
+        anoNasc = parseInt(anoNasc);//transforma streing em number
+
+        //processamento
+        let idade = anoAtual - anoNasc;
+        let idadeSemana = idade * 52;
+        
+        //saída
+        console.log("Sua idade: " + idade);
+        console.log("Idade em semana: " + idadeSemana);
+        
+        let txtSaida = "Sua idade: " + idade + "<br>";
+        txtSaida =  txtSaida +  " Idade em semana: " + idadeSemana;
+
+
+        document.getElementById("resultado").innerHTML = txtSaida;
+    </script>
+</body>
+</html>
