@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estruturas Condicionais</title>
+</head>
+
+<body>
+    <h1>Exercício 8 - IF</h1>
+    <p>Faça um programa que receba o nome, cargo e salário de um funcionário. Se o funcionário ganhar abaixo de 1000
+        reais, calcule o salário acrescido de 10%. Ao final exiba o nome, o cargo e o salário desse funcionário.</p>
+
+    <form action="">
+        <fieldset>
+            <legend>Reajuste Salarial</legend>
+
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" placeholder="Digite seu nome">
+
+            <label for="cargo">Cargo</label>
+            <input type="text" id="cargo" placeholder="Digite seu cargo">
+
+            <label for="salario">Salário</label>
+            <input type="text" id="salario" placeholder="Digite o salário">
+            <button onclick="calcular()">Calcular</button>
+            Reajuste: R$ <span id="resultado"></span>
+
+        </fieldset>
+    </form>
+
+    <script>
+        function calcular() {
+            event.preventDefault();//para o submit do formulário
+            //entrada
+            let nome = document.getElementById('nome').value;
+            let cargo = document.getElementById('cargo').value;
+            //transforma o salario de texto para número
+            let salario = parseFloat(document.getElementById('salario').value);
+
+            //processamento
+            if (salario < 1000) {//adiciona 10% no salário
+                salario = salario + (salario / 100 * 10);
+            }
+
+            //saída
+            document.getElementById('resultado').innerHTML = salario.toFixed(2);
+        }
+
+
+    </script>
+</body>
+
+</html>
