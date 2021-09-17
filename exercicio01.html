@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Exercício 01</h1>
+    <p>Faça um programa que receba a idade de uma pessoa em anos e
+        imprima essa idade em: Meses, Dias, Horas, Minutos.
+    </p>
+
+
+    <script>
+        /*
+            OPERADORES ARITIMÉTICOS BÁSICOS DA LINGUAGEM JS:
+            = ATRIBUIÇÃO
+            + SOMA OU CONCATENA
+            - SUBTRAÇÃO
+            * MULTIPLICAÇÃO
+            / DIVISÃO
+
+            TIPOS DE DADOS: number, string, boolean, undefined, null, infinity, object, array
+        
+        */
+        //entrada
+        let idade = prompt("Digite sua idade");
+
+        //processamento
+        let idadeMeses = idade * 12;
+        let idadeDias = idade * 365;
+        let idadeHoras = idadeDias * 24;
+        let idadeMinutos = idadeHoras * 60;
+
+
+
+        //saída
+        console.log("Idade em meses: " + idadeMeses);
+        console.log("Idade em dias: " + idadeDias);
+        console.log("Idade em Horas: " + idadeHoras);
+        console.log("Idade em Minutos: " + idadeMinutos);
+    </script>
+</body>
+
+</html>
