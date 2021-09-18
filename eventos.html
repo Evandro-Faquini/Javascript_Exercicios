@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Eventos em JavaScript</h1>
+
+    <label for="nome"> Nome</label>
+    <input onkeyup="mostrarTexto()"type="text" id="nome" placeholder="Seu nome">
+    <spam id="caracteres"></spam>
+
+    <script>
+
+function mostrarTexto(){
+let texto = document.getElementById("nome").value;
+
+console.log(texto);
+document.getElementById("caracteres").innerHTML = texto
+
+}
+
+    </script>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>If Composto</h1>
+    <h2>Exercício 16</h2>
+
+    <!-- <p>Uma empresa decide dar aumento aos funcionários de acordo com o seu cargo, disposto na tabela abaixo:
+
+        Cargo               % Aumento
+
+        Produção                6.5
+        Administrativo          7.5
+        Diretoria               12
+
+        De acordo com a tabela acima faça um programa que receba o cargo e o salário de um funcionário e calcule e imprima o salário reajustado.
+
+    </p> -->
+
+    <form action="">
+        <fieldset>
+            <legend>Reajuste Salarial</legend>
+            
+            <label for="cargo">Cargo</label>
+            <select id="cargo">
+                <option value="">Selecione</option>
+                <option value="adm">Administrativo</option>
+                <option value="diretoria">Diretoria</option>
+                <option value="producao">Produção</option>
+            </select>
+
+            <label for="salario">Salário</label>
+            <input type="number" id="salario">
+
+            <button onclick="resjustarSalario()">Reajustar Salário</button>
+
+            <span id="resultado">???</span>
+        </fieldset>
+    </form>
+
+
+    <script>
+
+        function resjustarSalario() {
+            event.preventDefault();//evitar o submit do formulário
+            
+            //entrada
+            let cargo = document.getElementById("cargo").value;
+            let salario = parseFloat( document.getElementById("salario").value );
+            let mensagem = "";
+
+            //processamento
+            if (cargo == "producao") {
+
+                salario = salario + (salario / 100 * 6.5);
+                mensagem = "Salário Reajustado para : R$" + salario.toFixed(2);
+
+            } else if (cargo == "adm") {
+
+                salario = salario + (salario / 100 * 7.5);
+                mensagem = "Salário Reajustado para : R$" + salario.toFixed(2);
+
+            } else if (cargo == "diretoria") {
+
+                salario = salario + (salario / 100 * 12);
+                mensagem = "Salário Reajustado para : R$" + salario.toFixed(2);
+
+            } else {
+                mensagem = "Cargo inválido";
+            }
+
+            //dentro do span
+            document.getElementById("resultado").innerHTML = mensagem
+
+        }//fim da função
+
+
+
+    </script>
+</body>
+
+</html>
